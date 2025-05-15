@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid'; // Import the uuid function
 
 const router = express.Router();
 
-const users = [
+let users = [
   {
     name: "John",
     lastName: "Doe",
@@ -47,7 +47,19 @@ router.post('/',(req ,res)=>{
 
 router.get('/:id',(req ,res)=>{
     console.log(req.params);
-    res.send(req.params);
+    const { id } = req.params; // Extract the id from the request parameters
+   
+    const foundUser = users.find((user)=> user.id === id); // Find the user with the matching id
+
+    res.send(foundUser); // Send the found user as the response
+})
+
+router.delete('/:id',(req ,res)=>{
+  const { id } = req.params; // Extract the id from the request parameters
+
+  users = users.filter((user) => user.id !== id); // Filter out the user with the matching id
+
+  res.send(`User with id ${id} deleted successfully`); // Send a success message
 })
 
 export default router;
