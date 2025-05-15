@@ -62,4 +62,22 @@ router.delete('/:id',(req ,res)=>{
   res.send(`User with id ${id} deleted successfully`); // Send a success message
 })
 
+router.patch('/:id' ,(req ,res) => {
+
+  const { id } = req.params; // Extract the id from the request parameters
+
+  const { name, lastName ,age } = req.body; // Extract the updated user data from the request body
+
+  
+  const user = users.find((user) => user.id === id); // Find the user with the matching id
+
+  if(name)user.name = name;
+  if(lastName)user.lastName = lastName;
+  if(age)user.age = age;
+  
+
+  res.send(`User with id ${id} updated successfully`); // Send a success message
+
+})
+
 export default router;
