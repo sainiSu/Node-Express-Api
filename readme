@@ -1,0 +1,64 @@
+# Node.js Express REST API
+
+This project is a simple RESTful API built with **Node.js** and **Express.js**. It demonstrates the core CRUD (Create, Read, Update, Delete) operations, ideal for learning how APIs work with HTTP requests and JSON data.
+
+---
+
+## 🔧 Technologies Used
+
+- **Node.js** – JavaScript runtime
+- **Express.js** – Web framework for Node.js
+- **UUID** – For generating unique IDs
+- **Nodemon** – Automatically restarts the server on changes
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sainiSu/Node-Express-Api.git
+cd node-express-api
+
+
+ 2. Dependencies Installed (Install in the terminal of the vs code)
+
+1. npm install
+
+3. node index.js  ## Run the server
+
+4. npx nodemon index.js ## nodemon 
+
+🧪 API Endpoints
+
+
+| Method | Endpoint         | Description       |
+| ------ | ---------------- | ----------------- |
+| GET    | `/api/items`     | Get all items     |
+| GET    | `/api/items/:id` | Get item by ID    |
+| POST   | `/api/items`     | Create a new item |
+
+
+📂 Project Structure
+
+node-express-api/
+├── index.js            # Entry point
+├── routes/             
+├── package.json
+|── user.json 
+└── README.md
+
+
+📝 Notes
+
+ - This is a beginner-friendly project which meant for learning.
+
+- No database is used by default; data is stored in-memory or in a JSON file.
+
+## 🙌 Acknowledgments
+
+This project is based on the tutorial:  
+[Build a REST API with Node.js and Express | CRUD API Tutorial]( https://www.youtube.com/watch?v=l8WPWK9mS5M) by  JavaScript Mastery.
+
+
